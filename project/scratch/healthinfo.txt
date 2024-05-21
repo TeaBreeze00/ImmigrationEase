@@ -1,0 +1,50 @@
+
+        <!-- Bank -->
+        <H4> Bank </H4>
+            <input type="text" name="bank_dfi" placeholder="DFI number" value="<?php echo $bank_dfi; ?>">
+            <span class="error"><?php echo $bank_dfi_err; ?></span>
+            <br>
+            
+            <!-- Will live at -->
+            <H4> Future Canadian address </H4>
+            <input type="text" name="future_location" placeholder="Can be chaged later" value="<?php echo $future_location; ?>">
+            <span class="error"><?php echo $future_location_err; ?></span>
+            <br>
+            
+            Planning to live for <input type="number" name="future_location_period" placeholder="10" value="<?php echo $future_location_period; ?>">
+            <span class="error"><?php echo $future_location_period_err; ?></span>
+            <br>
+            
+            <!-- Criminal History -->
+            <H4> Criminal History </H4>
+            <input type="text" name="crime" placeholder="brief description of crime" value="<?php echo $crime; ?>">
+            <span class="error"><?php echo $crime_err; ?></span>
+            <br>
+            
+            Prison time in days, 0 if none<input type="number" name="prison_time" placeholder="0" value="<?php echo $prison_time; ?>">
+            <span class="error"><?php echo $prison_time_err; ?></span>
+            <br>
+            
+            
+            <!-- Health History -->
+            <H4> Health History </H4>
+            <input type="text" name="health_desc" placeholder="brief description of health history" value="<?php echo $health_desc; ?>">
+            <span class="error"><?php echo $health_desc_err; ?></span>
+            <br>
+            
+            <select name="health_type">
+                <option value="" <?php echo ($health_type == '') ? 'selected' : ''; ?>>
+                    Select type
+                </option>
+                <option value="surgery" <?php echo ($health_type == 'surgery') ? 'selected' : ''; ?>>
+                    Surgery
+                </option>
+                <option value="vaccination" <?php echo ($health_type == 'vaccination') ? 'selected' : ''; ?>>
+                    Vaccination
+                </option>
+                <option value="allergy" <?php echo ($health_type == 'allergy') ? 'selected' : ''; ?>>
+                    Allergy
+                </option>
+            </select>
+            <span class="error"><?php echo $health_type_err; ?></span>
+            <br>
